@@ -10,22 +10,17 @@ import SwiftUI
 
 struct Home: View {
     
-    var menu = menuData
+
+    @State var show = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ForEach(menu) { item in
-                MenuRow(image: item.icon, text: item.title)
+        ZStack {
+            Button(action: { self.show.toggle() }) {
+            Text("Open Menu")
             }
-            Spacer()
+            
+            MenuView(show: $show)
         }
-        .padding(.top, 30)
-        .padding(30)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(30)
-        .padding(.trailing, 60)
-        .shadow(radius: 20)
     }
 }
 
@@ -64,3 +59,29 @@ let menuData = [
     Menu(title: "Team", icon: "person.and.person"),
     Menu(title: "Sign Out", icon: "arrow.uturn.down")
 ]
+
+struct MenuView: View {
+    var menu = menuData
+    @Binding var show: Bool
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            ForEach(menu) { item in
+                MenuRow(image: item.icon, text: item.title)
+            }
+            Spacer()
+        }
+        .padding(.top, 30)
+        .padding(30)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .background(Color.white)
+        .cornerRadius(30)
+        .padding(.trailing, 60)
+        .shadow(radius: 20)
+        .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10, z: 0))
+        .animation(.default)
+        .offset(x: show ? 0 : -UIScreen.main.bounds.width)
+        .onTapGesture {
+            self.show.toggle()
+        }
+    }
+}
