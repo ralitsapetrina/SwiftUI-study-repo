@@ -14,25 +14,41 @@ struct HomeList: View {
     var courses = coursesData
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 30) {
-                ForEach(courses) { item in
-                    Button(action: { self.showContent.toggle() }) {
-                        CourseView(
-                            title: item.title,
-                            image: item.image,
-                            color: item.color,
-                            shadowColor: item.shadowColor
-                        )
-                        .sheet(isPresented: self.$showContent) { ContentView() }
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Text("22 courses")
+                        .foregroundColor(.gray)
+                }
+                Spacer()
+            }
+            .padding(.leading, 70)
+            .padding(.bottom, 40)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 30) {
+                    ForEach(courses) { item in
+                        Button(action: { self.showContent.toggle() }) {
+                            CourseView(
+                                title: item.title,
+                                image: item.image,
+                                color: item.color,
+                                shadowColor: item.shadowColor
+                            )
+                                .sheet(isPresented: self.$showContent) { ContentView() }
+                        }
                     }
                 }
+                Spacer()
             }
-            Spacer()
+            .padding(.leading, 40)
         }
-        .padding(.leading, 30)
+        .padding(.top, 78.0)
     }
-
+    
 }
 
 struct HomeList_Previews: PreviewProvider {
@@ -53,7 +69,7 @@ struct CourseView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 .padding(.trailing, 50)
             Spacer()
