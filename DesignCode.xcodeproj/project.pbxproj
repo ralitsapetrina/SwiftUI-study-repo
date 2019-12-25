@@ -13,6 +13,7 @@
 		A2A84237238AE42800AEBF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A84236238AE42800AEBF83 /* Assets.xcassets */; };
 		A2A8423A238AE42800AEBF83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A84239238AE42800AEBF83 /* Preview Assets.xcassets */; };
 		A2A8423D238AE42800AEBF83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A8423B238AE42800AEBF83 /* LaunchScreen.storyboard */; };
+		A2DA4CED23B3648500B7D787 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4CEC23B3648500B7D787 /* TabBar.swift */; };
 		A2DA694F23A80C8D004A4ADB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA694E23A80C8D004A4ADB /* BlurView.swift */; };
 		A2DA695123ABF251004A4ADB /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA695023ABF251004A4ADB /* UpdateList.swift */; };
 		A2DA695323ABF8AC004A4ADB /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA695223ABF8AC004A4ADB /* UpdateDetail.swift */; };
@@ -30,6 +31,7 @@
 		A2A84239238AE42800AEBF83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2A8423C238AE42800AEBF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2A8423E238AE42800AEBF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DA4CEC23B3648500B7D787 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		A2DA694E23A80C8D004A4ADB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		A2DA695023ABF251004A4ADB /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		A2DA695223ABF8AC004A4ADB /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				A2A84230238AE42200AEBF83 /* AppDelegate.swift */,
 				A2A84232238AE42200AEBF83 /* SceneDelegate.swift */,
+				A2DA4CEC23B3648500B7D787 /* TabBar.swift */,
 				A2DA694E23A80C8D004A4ADB /* BlurView.swift */,
 				A2A84234238AE42200AEBF83 /* ContentView.swift */,
 				A2DB90C2239854640023D772 /* Home.swift */,
@@ -173,6 +176,7 @@
 				A2DB90C3239854640023D772 /* Home.swift in Sources */,
 				A2A84235238AE42200AEBF83 /* ContentView.swift in Sources */,
 				A2DA694F23A80C8D004A4ADB /* BlurView.swift in Sources */,
+				A2DA4CED23B3648500B7D787 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +317,7 @@
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +338,7 @@
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
