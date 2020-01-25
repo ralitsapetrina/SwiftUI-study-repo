@@ -21,9 +21,9 @@ struct TabBar: View {
                     Text("Certificates")
             })
                 .tag(2)
-            UpdateList().tabItem({
+            Settings().tabItem({
                     Image("IconSettings")
-                    Text("Updates")
+                    Text("Settings")
             })
             .tag(3)
         }
@@ -33,7 +33,7 @@ struct TabBar: View {
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
-            .environment(\.colorScheme, .dark)
+            .environment(\.colorScheme, .light)
             .environment(\.sizeCategory, .extraLarge)
     }
 }
